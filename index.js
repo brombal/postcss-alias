@@ -1,9 +1,7 @@
 'use strict';
 
-var postcss = require('postcss');
-
-module.exports = postcss.plugin('postcss-alias', function () {
-  return function (css) {
+module.exports = function () {
+  function alias(css) {
 
     var aliases = [];
     css.walkAtRules('alias', function(rule){
@@ -36,4 +34,11 @@ module.exports = postcss.plugin('postcss-alias', function () {
     aliases.forEach(expander);
 
   };
-});
+
+  return {
+    postcssPlugin: 'postcss-alias',
+    Once: alias
+  }
+};
+
+module.exports.postcss = true;

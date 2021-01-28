@@ -1,6 +1,6 @@
 {
   "name": "postcss-alias",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "PostCSS plugin that lets you create custom aliases for CSS properties with an @rule",
   "keywords": [
     "postcss",
@@ -25,8 +25,8 @@
     "url": "https://github.com/seaneking/postcss-alias/issues"
   },
   "homepage": "https://github.com/seaneking/postcss-alias",
-  "dependencies": {
-    "postcss": "^6.0.6"
+  "peerDependencies": {
+    "postcss": "^8.0.0"
   },
   "devDependencies": {
     "chai": "^4.0.2",
